@@ -27,10 +27,6 @@
   text-decoration: none;
 }
 
-button {
-  cursor: pointer;
-}
-
 html,
 body {
   font-family: "Roboto", sans-serif;
@@ -89,12 +85,19 @@ header.nav > nav.navigation > a + a {
   position: relative;
 }
 
-.banner-container > img {
+.banner-container > .banners {
+  width: 100%;
+  height: 30rem;
+  position: relative;
+  background: var(--color-primary);
+}
+
+.banner-container > .banners > img {
   width: 100%;
   height: 100%;
 }
 
-.banner-container > .banner-product-info {
+.banner-container > .banners > .banner-product-info {
   left: 0;
   right: 0;
   bottom: 2rem;
@@ -105,7 +108,7 @@ header.nav > nav.navigation > a + a {
   font-size: 1rem;
 }
 
-.banner-container > .banner-commanders {
+.banner-container > .banner-comanders {
   left: 0;
   right: 0;
   bottom: 0;
@@ -116,7 +119,7 @@ header.nav > nav.navigation > a + a {
   align-items: center;
 }
 
-.banner-container > .banner-commanders > span {
+.banner-container > .banner-comanders > span {
   width: 1rem;
   height: 1rem;
   background: var(--contrast-shade);
@@ -125,15 +128,16 @@ header.nav > nav.navigation > a + a {
   cursor: pointer;
 }
 
-.banner-container > .banner-commanders > span + span {
+.banner-container > .banner-comanders > span + span {
   margin-left: 1rem;
 }
 
-.banner-container > .banner-commanders > span.active {
+.banner-container > .banner-comanders > span.active {
   background: var(--primary);
   border-color: var(--primary-tint);
 }
-/* #endregion */
+
+/* #region banner */
 
 /* #region products */
 .products-container {
@@ -156,5 +160,74 @@ header.nav > nav.navigation > a + a {
 .products-container > .product-card > figure > img {
   width: 100%;
   height: 8.5rem;
+}
+
+.products-container >.product-card > .product-info {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  color: var(--contrast-shade);
+}
+
+.products-container > .product-card > .product-info > p {
+  padding: 0.5rem 0;
+  color: var(--contrast-tint);
+  font-size: 0.8rem;
+}
+
+.products-container > .product-card > .product-info > .product-price {
+  text-align: right;
+  color: var(--contrast-shade);
+}
+
+.products-container > .product-card > footer {
+  padding-top: 0.5rem;
+  display: flex;
+}
+
+.products-container > .product-card > footer > button {
+  flex: 1;
+  padding: 0.5rem;
+  border: var(--border);
+  border-radius: var(--br-sm);
+  background: var(--primary);
+  color: var(--aux);
+}
+
+.products-container > .product-card > footer > button:hover {
+  background: var(--primary-tint);
+}
+
+
+/* #endregion */
+
+
+.promotional {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2rem;
+}
+
+.promotional > .promotional-item {
+  width: 32rem;
+  height: 18rem;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  border-radius: var(--br-xs);
+  border: var(--border);
+}
+
+.promotional > .promotional-item > img {
+  width: 100%;
+  height: 100%;
+}
+
+/* #region footrt */
+body > footer {
+  padding: 1rem;
+  background: var(--primary);
+  text-align: center;
+  color: var(--aux);
 }
 /* #endregion */
