@@ -3,7 +3,7 @@ class Cart {
     this.badge = document.getElementById("cart-badge");
     this.list = [];
 
-    if (!localStorage.cart) {
+    if (!!localStorage.cart) {
       this.list = JSON.parse(localStorage.getItem("cart"));
       this.reloadBadge();
     }

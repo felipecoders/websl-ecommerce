@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Loja</title>
-
+    <title>Cart</title>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -15,14 +15,16 @@
 
     <link rel="stylesheet" href="fontawesome/css/all.min.css" />
     <link rel="stylesheet" href="css/base.css" />
+    
+    <script src="./js/anime.min.js"></script>
 
     <script src="./js/data.js"></script>
     <script src="./js/utils.js"></script>
-    <script src="./js/banner.js" defer></script>
-    <script src="./js/products-cards.js" defer></script>
-    <script src="./js/categories.js" defer></script>
-    <script src="./js/cart.js" defer></script>
+
+    <script defer src="./js/cart.js"></script>
+    <script defer src="./js/page-cart.js"></script>
   </head>
+
   <body>
     <header class="nav">
       <figure class="logomarca">e-comerce</figure>
@@ -32,23 +34,38 @@
         <a href="/products.html">Products</a>
         <a href="/cart.html">
           <i class="fa-solid fa-cart-shopping"></i>
-          <span
-            id="cart-badge"
-            class="cart-badge"
-            style="display: none;"
-          >
+          <span id="cart-badge" class="cart-badge" style="display: none">
             0
           </span>
         </a>
       </nav>
     </header>
 
-    <section class="banner-container" id="banner-container"></section>
+    <section class="cart" id="cart">
+      <ul class="products-list" id="products-list"></ul>
+      <footer class="total-footer">
+        <span>Total</span>
+        <strong id="total-price"></strong>
+      </footer>
 
-    <section class="products-container" id="products-container"></section>
+      <footer class="high-button">
+        <button id="go-to-register">Continuar</button>
+      </footer>
+    </section>
 
-    <section class="promotional" id="promotional"></section>
+    <section class="register" id="register">
+      <form id="client">
+        <h1>Cadastro</h1>
+        <input type="text" id="name" placeholder="* Nome" />
 
-    <footer>Copyright</footer>
+        <footer class="high-button">
+          <button type="submit">Finalizar compra</button>
+        </footer>
+      </form>
+    </section>
+
+    <section class="loading-compra" id="loading"></section>
+
+    <footer>e-commerce example</footer>
   </body>
 </html>

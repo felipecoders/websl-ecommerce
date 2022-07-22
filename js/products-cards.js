@@ -26,9 +26,9 @@ function initProductsCard(selector, products) {
     const footer = document.createElement("footer");
     const add = document.createElement("button");
     add.innerText = "Adicionar";
-    //   add.onclick = function() {
-    //     cart.addProduct(product)
-    //   }
+    add.onclick = function () {
+      cart.addProduct(product);
+    };
 
     footer.append(add);
     info.append(name, detail, price);
