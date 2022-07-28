@@ -27,11 +27,6 @@ class PageClient {
         return;
       }
 
-      console.log({
-        user: { name: value },
-        products: cart.getList(),
-      });
-
       target.classList.add("active");
       anime({
         targets: target.children,
@@ -82,7 +77,7 @@ class PageClient {
       const item = document.createElement("li");
       const figure = document.createElement("figure");
       const img = document.createElement("img");
-      img.src = `/images/${product.img_url}`;
+      img.src = product.image_url;
       img.setAttribute("alt", product.name);
       figure.append(img);
       item.append(figure);
