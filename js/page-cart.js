@@ -1,6 +1,6 @@
 class PageClient {
-  constructor() {
-    this.elementTarget = document.getElementById("products-list");
+  constructor(selector) {
+    this.elementTarget = document.getElementById(selector);
     this.init();
 
     const target = document.getElementById("loading");
@@ -123,4 +123,4 @@ class PageClient {
   }
 }
 
-const pageClient = new PageClient();
+const pageClient = new PageClient("products-list");
